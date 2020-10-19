@@ -1,0 +1,45 @@
+.header{
+    display:flex;
+    justify-content: space-between; /*Spacing bewteen the flexitems*/
+    position: sticky;
+    top:0;
+    background-color: white;
+    z-index:100;
+    width:100%;
+    align-items: center; /* So that every element is centered in the container along the axis of container*/
+
+}
+.header__icon{
+    object-fit: contain;
+    height:100px;
+    margin-left: 20px;
+}
+.header__center{
+    display: flex;
+    align-items: center;
+    flex:1;   /*TO give it more priority to take up as much space as it can*/
+    max-width:fit-content;
+    height:30px;
+    padding:10px;
+    border:1px solid lightgrey;
+    border-radius: 999px;; /* To make a oval shape as provided by bootstrap button btn btn-danger*/
+}
+.header__center > input{
+    border:none;
+    /* width:250px; */
+    padding:10px;
+    outline-width: 0;  /*So that the input field does not display a blue outline when we click on it to write*/
+}
+.header__right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right:80px;
+    width:15vw;
+}
+@media screen and (max-width:414px){
+    .header{
+        justify-content: space-around;
+    }
+    
+}
